@@ -68,7 +68,6 @@ The next step is to configure a route in your app matching this path:
 
         // ...
         use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-        use Symfony\Component\HttpFoundation\Request;
         use Symfony\Component\Routing\Annotation\Route;
 
         class SecurityController extends AbstractController
@@ -76,7 +75,7 @@ The next step is to configure a route in your app matching this path:
             /**
              * @Route("/login", name="login", methods={"POST"})
              */
-            public function login(Request $request)
+            public function login()
             {
                 $user = $this->getUser();
 
